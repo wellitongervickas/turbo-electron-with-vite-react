@@ -4,12 +4,24 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**", "out/**"]
     },
     "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+    "make": {
+      "dependsOn": ["build"],
+      "outputs": ["out/**"]
+    },
+    "package": {
+      "dependsOn": ["build"],
+      "outputs": ["out/**"]
     }
   }
 }
