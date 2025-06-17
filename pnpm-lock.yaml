@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
     devDependencies:
       eslint:
         specifier: ^8.57.0
@@ -54,6 +58,9 @@ importers:
       '@repo/vite':
         specifier: workspace:*
         version: link:../../packages/vite
+      '@types/electron-squirrel-startup':
+        specifier: ^1.0.2
+        version: 1.0.2
       '@typescript-eslint/eslint-plugin':
         specifier: ^5.0.0
         version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.57.1)(typescript@4.5.5)
@@ -78,6 +85,9 @@ importers:
       vite:
         specifier: ^5.0.12
         version: 5.4.17(@types/node@24.0.3)
+      web:
+        specifier: workspace:*
+        version: link:../web
 
   apps/web:
     dependencies:
@@ -1340,6 +1350,10 @@ packages:
       '@types/responselike': 1.0.3
     dev: true
 
+  /@types/electron-squirrel-startup@1.0.2:
+    resolution: {integrity: sha512-AzxnvBzNh8K/0SmxMmZtpJf1/IWoGXLP+pQDuUaVkPyotI8ryvAtBSqgxR/qOSvxWHYWrxkeNsJ+Ca5xOuUxJQ==}
+    dev: true
+
   /@types/estree@1.0.7:
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
@@ -2385,6 +2399,11 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+
+  /dotenv@16.5.0:
+    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+    engines: {node: '>=12'}
+    dev: false
 
   /dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}

@@ -2,8 +2,8 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
-    "start": "turbo run start --filter=app",
+    "dev": " turbo run dev",
+    "start": " turbo run start --filter=app",
     "make": "turbo run make --filter=app",
     "package": "turbo run package --filter=app",
     "lint": "turbo run lint",
@@ -15,5 +15,8 @@
     "turbo": "^2.5.4"
   },
   "packageManager": "pnpm@8.15.6",
-  "name": "with-vite-react"
+  "name": "with-vite-react",
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
 }

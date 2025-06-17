@@ -1,8 +1,9 @@
 import { app, BrowserWindow } from "electron";
 import path from "node:path";
 import started from "electron-squirrel-startup";
+import "dotenv";
 
-const IS_RELEASE = false;
+const IS_RELEASE = process.env.NODE_ENV === "production";
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
@@ -21,7 +22,9 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   if (IS_RELEASE) {
-    mainWindow.loadFile(path.join(__dirname, `../../web/dist/index.html`));
+    mainWindow.loadFile(
+      path.join(__dirname, `../renderer/${MAIN_WINDOW_VITE_NAME}/index.html`)
+    );
   } else {
     mainWindow.loadURL("http://localhost:5173");
   }

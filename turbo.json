@@ -20,7 +20,7 @@
       "outputs": ["out/**"]
     },
     "package": {
-      "dependsOn": ["build"],
+      "dependsOn": ["make"],
       "outputs": ["out/**"]
     }
   }
