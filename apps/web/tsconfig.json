@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
+  "extends": "@repo/vite/tsconfig.json",
   "include": ["src"],
   "compilerOptions": {
     "jsx": "react-jsx"
